@@ -1,0 +1,8 @@
+# Allow all search engines to crawl all content
+User-agent: *
+Disallow: /login-signup.html
+Disallow: /header.html
+Disallow: /footer.html
+
+# Sitemap location
+Sitemap: https://www.themotorgaadi.in/sitemap.xml
