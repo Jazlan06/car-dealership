@@ -1,0 +1,1791 @@
+/* General styles */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 120px;
+    border-bottom: 1px solid rgb(181, 164, 164);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-button {
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 150px;
+    margin-left: 50px;
+}
+
+.mg-icon {
+    height: 100%;
+    width: 100%;
+}
+
+.middle-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 450px;
+}
+
+.brand-name {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-size: 55px;
+    font-weight: 700;
+    color: rgb(139, 0, 0);
+}
+
+.the {
+    font-size: 43px;
+}
+
+.right-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 700px;
+}
+
+.right-section ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    z-index: 999;
+}
+
+.right-section ul li {
+    margin: 0 10px;
+}
+
+.right-section ul li a {
+    text-decoration: none;
+    color: rgb(139, 0, 0);
+    font-size: 20px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.right-section .menu-btn i {
+    color: rgb(139, 0, 0);
+    font-size: 28px;
+    cursor: pointer;
+    display: none;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    header {
+        height: 150px;
+    }
+
+    .left-section {
+        margin-left: 8px;
+    }
+
+    .mg-icon {
+        width: 150px;
+    }
+
+    .middle-section {
+        display: none;
+    }
+
+    .right-section {
+        display: flex;
+        justify-content: space-evenly;
+        height: 100%;
+        width: 180px;
+    }
+
+    .logo {
+        margin: 10px;
+        padding-top: 5px;
+    }
+
+    .brand-name {
+        font-size: 25px;
+    }
+
+    .right-section .menu-btn i {
+        display: block;
+    }
+
+    .right-section ul {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 75px;
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        background: #ebebeb;
+        height: 100vh;
+        width: 100%;
+        text-align: center;
+        display: block;
+        transition: all 0.3s ease;
+        z-index: 1000;
+    }
+
+    .right-section ul li {
+        width: 100%;
+        margin: 25px 0;
+    }
+
+    .right-section ul li a {
+        width: 100%;
+        margin-left: -100%;
+        display: block;
+        font-size: 20px;
+        padding: 6px 10px;
+        transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    .right-section .menu-btn i {
+        display: block;
+        padding-left: 10px;
+    }
+
+    #click:checked~ul {
+        left: 0;
+    }
+
+    #click:checked~ul li a {
+        margin-left: 0px;
+    }
+
+
+    input[type="checkbox"]:checked~ul {
+        left: 0;
+        z-index: 2;
+    }
+
+    .profile-icon-mobile {
+        width: 35px;
+        display: flex;
+        border: none;
+        outline: none;
+    }
+
+    .profile-icon-mobile:focus {
+        outline: none;
+    }
+
+    footer {
+        background-color: #ffffff;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        margin-top: 50px;
+    }
+
+    .footerContainer {
+        width: 100%;
+    }
+
+    .socialIcons {
+        display: flex;
+        justify-content: center;
+    }
+
+    .socialIcons a {
+        text-decoration: none;
+        padding: 8px;
+        background-color: white;
+        margin: 4px;
+        border-radius: 50%;
+    }
+
+    .socialIcons a i {
+        font-size: 2em;
+        color: rgb(139, 0, 0);
+        opacity: 0.9;
+    }
+
+    .socialIcons a:hover {
+        background-color: #111;
+        transition: 0.5s;
+    }
+
+    .socialIcons a:hover i {
+        color: white;
+        transition: 0.5s;
+    }
+
+    .footerNav {
+        display: flex;
+    }
+
+    .footerNav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        list-style-type: none;
+        width: 100%;
+        padding: 0;
+    }
+
+    .footerNav ul li {
+        margin: 10px;
+    }
+
+    .footerNav ul li a {
+        color: rgb(139, 0, 0);
+        margin: 20px;
+        text-decoration: none;
+        font-size: 1.3em;
+        font-weight: 600;
+        opacity: 0.7;
+        transition: 0.5s;
+    }
+
+    .footerNav ul li a:hover {
+        opacity: 1;
+    }
+
+    .footerBottom {
+        background-color: rgb(139, 0, 0);
+        padding: 10px;
+        text-align: center;
+    }
+
+    .footerBottom p {
+        color: white;
+    }
+
+    .profile-button2 {
+        display: none;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 800px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        height: 130px;
+        width: 100%;
+    }
+
+    .left-section {
+        margin-left: -20px;
+    }
+
+    .mg-icon {
+        width: 100px;
+        height: 100px;
+        mix-blend-mode: darken;
+    }
+
+    .middle-section {
+        display: none;
+    }
+
+    .right-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        padding: 0;
+        margin-left: -50px;
+        width: fit-content;
+        /* Adjust width for tablets */
+    }
+
+
+    .right-section .menu-btn i {
+        display: none;
+        /* Hide menu button on larger screens */
+    }
+
+    .right-section ul {
+        margin-top: 10px;
+        background: transparent;
+        /* No background needed */
+        height: auto;
+        /* Height adjusted */
+        width: auto;
+        /* Auto width */
+        text-align: left;
+        /* Align text to the left */
+        transition: none;
+        /* No transition needed */
+        z-index: auto;
+        /* Reset z-index */
+        text-wrap: nowrap;
+    }
+
+    .right-section ul li {
+        margin: 0 2px;
+        /* Adjust spacing for horizontal layout */
+    }
+
+    .right-section ul li a {
+        font-size: 1.1em;
+        /* Increase font size for readability */
+        padding: 8px 12px;
+        /* Adjust padding */
+    }
+
+    .profile-button {
+        margin-left: 0;
+        display: none;
+    }
+
+    .profile-icon-mobile {
+        display: none;
+        /* Hide mobile profile icon on tablet view */
+    }
+
+    .profile-button2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 70px;
+        height: 70px;
+        background: none;
+        border: none;
+        margin-right: 2px;
+    }
+
+    .profile-icon-web {
+        width: 100%;
+        height: 100%;
+    }
+
+    footer {
+        background-color: #ffffff;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        margin-top: 50px;
+    }
+
+    .footerContainer {
+        width: 100%;
+    }
+
+    .socialIcons {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .socialIcons a {
+        text-decoration: none;
+        padding: 10px;
+        background-color: white;
+        margin: 6px;
+        border-radius: 50%;
+    }
+
+    .socialIcons a i {
+        font-size: 4em;
+        /* Increase icon size */
+        color: rgb(139, 0, 0);
+        opacity: 0.9;
+        margin-top: 50px;
+        z-index: 0;
+    }
+
+    .socialIcons a:hover {
+        background-color: #111;
+        transition: 0.5s;
+    }
+
+    .socialIcons a:hover i {
+        color: white;
+        transition: 0.5s;
+    }
+
+    .footerNav {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .footerNav ul {
+        display: flex;
+        flex-direction: column;
+        /* Horizontal layout */
+        align-items: center;
+        justify-content: center;
+        list-style-type: none;
+        width: auto;
+        /* Adjust width */
+        padding: 0;
+    }
+
+    .footerNav ul li {
+        margin: 20px 20px;
+    }
+
+    .footerNav ul li a {
+        color: rgb(93, 3, 3);
+        text-decoration: none;
+        font-size: 2em;
+        /* Increase font size */
+        font-weight: 600;
+        opacity: 0.7;
+        transition: 0.5s;
+    }
+
+    .footerNav ul li a:hover {
+        opacity: 1;
+    }
+
+    .footerBottom {
+        background-color: rgb(139, 0, 0);
+        padding: 15px;
+        /* Increase padding */
+        text-align: center;
+    }
+
+    .footerBottom p {
+        color: white;
+        font-size: 1.9em;
+        /* Slightly larger font size for readability */
+    }
+}
+
+@media (min-width: 801px) and (max-width: 900px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        height: 130px;
+        width: 100%;
+    }
+
+    .left-section {
+        margin-left: -20px;
+    }
+
+    .mg-icon {
+        width: 150px;
+        height: 150px;
+        margin-left: 20px;
+        mix-blend-mode: darken;
+    }
+
+    .middle-section {
+        display: none;
+    }
+
+    .right-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        padding: 0;
+        margin-left: -100px;
+        width: fit-content;
+        /* Adjust width for tablets */
+    }
+
+
+    .right-section .menu-btn i {
+        display: none;
+        /* Hide menu button on larger screens */
+    }
+
+    .right-section ul {
+        margin-top: 10px;
+        background: transparent;
+        /* No background needed */
+        height: auto;
+        /* Height adjusted */
+        width: auto;
+        /* Auto width */
+        text-align: left;
+        /* Align text to the left */
+        transition: none;
+        /* No transition needed */
+        z-index: auto;
+        /* Reset z-index */
+        text-wrap: nowrap;
+    }
+
+    .right-section ul li {
+        margin: 0 2px;
+        /* Adjust spacing for horizontal layout */
+    }
+
+    .right-section ul li a {
+        font-size: 1.4em;
+        /* Increase font size for readability */
+        padding: 8px 12px;
+        /* Adjust padding */
+    }
+
+    .profile-button {
+        margin-left: 0;
+        display: none;
+    }
+
+    .profile-icon-mobile {
+        display: none;
+        /* Hide mobile profile icon on tablet view */
+    }
+
+    .profile-button2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 70px;
+        max-height: 70px;
+        background: none;
+        border: none;
+        margin-right: 2px;
+    }
+
+    .profile-icon-web {
+        width: 100%;
+        height: 100%;
+    }
+
+    footer {
+        background-color: #ffffff;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        margin-top: 50px;
+    }
+
+    .footerContainer {
+        width: 100%;
+    }
+
+    .socialIcons {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .socialIcons a {
+        text-decoration: none;
+        padding: 10px;
+        background-color: white;
+        margin: 6px;
+        border-radius: 50%;
+    }
+
+    .socialIcons a i {
+        font-size: 4em;
+        /* Increase icon size */
+        color: rgb(139, 0, 0);
+        opacity: 0.9;
+        margin-top: 50px;
+        z-index: 0;
+    }
+
+    .socialIcons a:hover {
+        background-color: #111;
+        transition: 0.5s;
+    }
+
+    .socialIcons a:hover i {
+        color: white;
+        transition: 0.5s;
+    }
+
+    .footerNav {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .footerNav ul {
+        display: flex;
+        flex-direction: column;
+        /* Horizontal layout */
+        align-items: center;
+        justify-content: center;
+        list-style-type: none;
+        width: auto;
+        /* Adjust width */
+        padding: 0;
+    }
+
+    .footerNav ul li {
+        margin: 20px 20px;
+    }
+
+    .footerNav ul li a {
+        color: rgb(93, 3, 3);
+        text-decoration: none;
+        font-size: 2em;
+        /* Increase font size */
+        font-weight: 600;
+        opacity: 0.7;
+        transition: 0.5s;
+    }
+
+    .footerNav ul li a:hover {
+        opacity: 1;
+    }
+
+    .footerBottom {
+        background-color: rgb(139, 0, 0);
+        padding: 15px;
+        /* Increase padding */
+        text-align: center;
+    }
+
+    .footerBottom p {
+        color: white;
+        font-size: 1.9em;
+        /* Slightly larger font size for readability */
+    }
+}
+
+@media (min-width: 901px) and (max-width: 1024px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        height: 130px;
+        width: 100%;
+    }
+
+    .left-section {
+        margin-left: -20px;
+    }
+
+    .mg-icon {
+        width: 150px;
+        height: 150px;
+        margin-left: 20px;
+        mix-blend-mode: darken;
+    }
+
+    .middle-section {
+        display: none;
+    }
+
+    .right-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        padding: 0;
+        margin-left: -100px;
+        width: fit-content;
+        /* Adjust width for tablets */
+    }
+
+
+    .right-section .menu-btn i {
+        display: none;
+        /* Hide menu button on larger screens */
+    }
+
+    .right-section ul {
+        margin-top: 10px;
+        background: transparent;
+        /* No background needed */
+        height: auto;
+        /* Height adjusted */
+        width: auto;
+        /* Auto width */
+        text-align: left;
+        /* Align text to the left */
+        transition: none;
+        /* No transition needed */
+        z-index: auto;
+        /* Reset z-index */
+        text-wrap: nowrap;
+    }
+
+    .right-section ul li {
+        margin: 0 2px;
+        /* Adjust spacing for horizontal layout */
+    }
+
+    .right-section ul li a {
+        font-size: 1.4em;
+        /* Increase font size for readability */
+        padding: 8px 12px;
+        /* Adjust padding */
+    }
+
+    .profile-button {
+        margin-left: 0;
+        display: none;
+    }
+
+    .profile-icon-mobile {
+        display: none;
+        /* Hide mobile profile icon on tablet view */
+    }
+
+    .profile-button2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 70px;
+        max-height: 70px;
+        background: none;
+        border: none;
+        margin-right: 2px;
+    }
+
+    .profile-icon-web {
+        width: 100%;
+        height: 100%;
+    }
+
+    footer {
+        background-color: #ffffff;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        margin-top: 50px;
+    }
+
+    .footerContainer {
+        width: 100%;
+    }
+
+    .socialIcons {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .socialIcons a {
+        text-decoration: none;
+        padding: 10px;
+        background-color: white;
+        margin: 6px;
+        border-radius: 50%;
+    }
+
+    .socialIcons a i {
+        font-size: 5em;
+        /* Increase icon size */
+        color: rgb(139, 0, 0);
+        opacity: 0.9;
+        margin: 0 15px;
+        margin-top: 50px;
+        z-index: 0;
+    }
+
+    .socialIcons a:hover {
+        background-color: #111;
+        transition: 0.5s;
+    }
+
+    .socialIcons a:hover i {
+        color: white;
+        transition: 0.5s;
+    }
+
+    .footerNav {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .footerNav ul {
+        display: flex;
+        flex-direction: column;
+        /* Horizontal layout */
+        align-items: center;
+        justify-content: center;
+        list-style-type: none;
+        width: auto;
+        /* Adjust width */
+        padding: 0;
+    }
+
+    .footerNav ul li {
+        margin: 20px 20px;
+    }
+
+    .footerNav ul li a {
+        color: rgb(93, 3, 3);
+        text-decoration: none;
+        font-size: 2.8em;
+        /* Increase font size */
+        font-weight: 600;
+        opacity: 0.7;
+        transition: 0.5s;
+    }
+
+    .footerNav ul li a:hover {
+        opacity: 1;
+    }
+
+    .footerBottom {
+        background-color: rgb(139, 0, 0);
+        padding: 15px;
+        /* Increase padding */
+        text-align: center;
+    }
+
+    .footerBottom p {
+        color: white;
+        font-size: 2.5em;
+        /* Slightly larger font size for readability */
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1225px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        height: 130px;
+        width: 100%;
+    }
+
+    .left-section {
+        margin-left: -20px;
+    }
+
+    .mg-icon {
+        width: 180px;
+        height: 180px;
+        margin-left: 80px;
+        mix-blend-mode: darken;
+    }
+
+    .middle-section {
+        display: none;
+    }
+
+    .right-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        padding: 0;
+        margin-left: -100px;
+        width: fit-content;
+        /* Adjust width for tablets */
+    }
+
+
+    .right-section .menu-btn i {
+        display: none;
+        /* Hide menu button on larger screens */
+    }
+
+    .right-section ul {
+        margin-top: 10px;
+        background: transparent;
+        /* No background needed */
+        height: auto;
+        /* Height adjusted */
+        width: auto;
+        /* Auto width */
+        text-align: left;
+        /* Align text to the left */
+        transition: none;
+        /* No transition needed */
+        z-index: auto;
+        /* Reset z-index */
+        text-wrap: nowrap;
+    }
+
+    .right-section ul li {
+        margin: 0 2px;
+        /* Adjust spacing for horizontal layout */
+    }
+
+    .right-section ul li a {
+        font-size: 1.9em;
+        /* Increase font size for readability */
+        padding: 8px 12px;
+        /* Adjust padding */
+    }
+
+    .profile-button {
+        margin-left: 0;
+        display: none;
+    }
+
+    .profile-icon-mobile {
+        display: none;
+        /* Hide mobile profile icon on tablet view */
+    }
+
+    .profile-button2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 80px;
+        max-height: 80px;
+        background: none;
+        border: none;
+        margin-right: 2px;
+    }
+
+    .profile-icon-web {
+        width: 100%;
+        height: 100%;
+    }
+
+    footer {
+        background-color: #ffffff;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        margin-top: 50px;
+    }
+
+    .footerContainer {
+        width: 100%;
+    }
+
+    .socialIcons {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .socialIcons a {
+        text-decoration: none;
+        padding: 10px;
+        background-color: white;
+        margin: 6px;
+        border-radius: 50%;
+    }
+
+    .socialIcons a i {
+        font-size: 5.5em;
+        /* Increase icon size */
+        color: rgb(139, 0, 0);
+        opacity: 0.9;
+        margin: 0 15px;
+        margin-top: 50px;
+        z-index: 0;
+    }
+
+    .socialIcons a:hover {
+        background-color: #111;
+        transition: 0.5s;
+    }
+
+    .socialIcons a:hover i {
+        color: white;
+        transition: 0.5s;
+    }
+
+    .footerNav {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .footerNav ul {
+        display: flex;
+        flex-direction: column;
+        /* Horizontal layout */
+        align-items: center;
+        justify-content: center;
+        list-style-type: none;
+        width: auto;
+        /* Adjust width */
+        padding: 0;
+    }
+
+    .footerNav ul li {
+        margin: 20px 20px;
+    }
+
+    .footerNav ul li a {
+        color: rgb(93, 3, 3);
+        text-decoration: none;
+        font-size: 3em;
+        /* Increase font size */
+        font-weight: 600;
+        opacity: 0.7;
+        transition: 0.5s;
+    }
+
+    .footerNav ul li a:hover {
+        opacity: 1;
+    }
+
+    .footerBottom {
+        background-color: rgb(139, 0, 0);
+        padding: 15px;
+        /* Increase padding */
+        text-align: center;
+    }
+
+    .footerBottom p {
+        color: white;
+        font-size: 3em;
+        /* Slightly larger font size for readability */
+    }
+}
+
+@media (min-width: 1226px) and (max-width: 1700px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        height: 130px;
+        width: 100%;
+    }
+
+    .left-section {
+        margin-left: -20px;
+    }
+
+    .mg-icon {
+        width: 220px;
+        height: 220px;
+        margin-left: 130px;
+        mix-blend-mode: darken;
+    }
+
+    .middle-section {
+        display: none;
+    }
+
+    .right-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        padding: 0;
+        margin-left: -100px;
+        width: fit-content;
+        /* Adjust width for tablets */
+    }
+
+
+    .right-section .menu-btn i {
+        display: none;
+        /* Hide menu button on larger screens */
+    }
+
+    .right-section ul {
+        margin-top: 10px;
+        background: transparent;
+        /* No background needed */
+        height: auto;
+        /* Height adjusted */
+        width: auto;
+        /* Auto width */
+        text-align: left;
+        /* Align text to the left */
+        transition: none;
+        /* No transition needed */
+        z-index: auto;
+        /* Reset z-index */
+        text-wrap: nowrap;
+    }
+
+    .right-section ul li {
+        margin: 0 4px;
+        /* Adjust spacing for horizontal layout */
+    }
+
+    .right-section ul li a {
+        font-size: 2.3em;
+        /* Increase font size for readability */
+        padding: 8px 12px;
+        /* Adjust padding */
+    }
+
+    .profile-button {
+        margin-left: 0;
+        display: none;
+    }
+
+    .profile-icon-mobile {
+        display: none;
+        /* Hide mobile profile icon on tablet view */
+    }
+
+    .profile-button2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        background: none;
+        border: none;
+        margin-right: 20px;
+    }
+
+    .profile-icon-web {
+        width: 100%;
+        height: 100%;
+    }
+
+    footer {
+        background-color: #ffffff;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        margin-top: 50px;
+    }
+
+    .footerContainer {
+        width: 100%;
+    }
+
+    .socialIcons {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .socialIcons a {
+        text-decoration: none;
+        padding: 10px;
+        background-color: white;
+        margin: 6px;
+        border-radius: 50%;
+    }
+
+    .socialIcons a i {
+        font-size: 6.5em;
+        /* Increase icon size */
+        color: rgb(139, 0, 0);
+        opacity: 0.9;
+        margin: 0 20px;
+        margin-top: 50px;
+        z-index: 0;
+    }
+
+    .socialIcons a:hover {
+        background-color: #111;
+        transition: 0.5s;
+    }
+
+    .socialIcons a:hover i {
+        color: white;
+        transition: 0.5s;
+    }
+
+    .footerNav {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .footerNav ul {
+        display: flex;
+        flex-direction: column;
+        /* Horizontal layout */
+        align-items: center;
+        justify-content: center;
+        list-style-type: none;
+        width: auto;
+        /* Adjust width */
+        padding: 0;
+    }
+
+    .footerNav ul li {
+        margin: 20px 20px;
+    }
+
+    .footerNav ul li a {
+        color: rgb(93, 3, 3);
+        text-decoration: none;
+        font-size: 3.5em;
+        /* Increase font size */
+        font-weight: 600;
+        opacity: 0.7;
+        transition: 0.5s;
+    }
+
+    .footerNav ul li a:hover {
+        opacity: 1;
+    }
+
+    .footerBottom {
+        background-color: rgb(139, 0, 0);
+        padding: 15px;
+        /* Increase padding */
+        text-align: center;
+    }
+
+    .footerBottom p {
+        color: white;
+        font-size: 3.5em;
+        /* Slightly larger font size for readability */
+    }
+}
+
+@media (min-width: 1701px) and (max-width: 2151px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        height: 150px;
+        width: 100%;
+    }
+
+    .left-section {
+        margin-left: -20px;
+    }
+
+    .mg-icon {
+        width: 280px;
+        height: 280px;
+        margin-left: 180px;
+        mix-blend-mode: darken;
+    }
+
+    .middle-section {
+        display: none;
+    }
+
+    .right-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        padding: 0;
+        margin-left: -300px;
+        width: fit-content;
+        /* Adjust width for tablets */
+    }
+
+
+    .right-section .menu-btn i {
+        display: none;
+        /* Hide menu button on larger screens */
+    }
+
+    .right-section ul {
+        margin-top: 10px;
+        background: transparent;
+        /* No background needed */
+        height: auto;
+        /* Height adjusted */
+        width: auto;
+        /* Auto width */
+        text-align: left;
+        /* Align text to the left */
+        transition: none;
+        /* No transition needed */
+        z-index: auto;
+        /* Reset z-index */
+        text-wrap: nowrap;
+    }
+
+    .right-section ul li {
+        margin: 0 10px;
+        /* Adjust spacing for horizontal layout */
+    }
+
+    .right-section ul li a {
+        font-size: 2.8em;
+        /* Increase font size for readability */
+        padding: 8px 12px;
+        /* Adjust padding */
+    }
+
+    .profile-button {
+        margin-left: 0;
+        display: none;
+    }
+
+    .profile-icon-mobile {
+        display: none;
+        /* Hide mobile profile icon on tablet view */
+    }
+
+    .profile-button2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+        width: 100px;
+        max-width: 100px;
+        max-height: 100px;
+        background: none;
+        border: none;
+        margin-right: 40px;
+    }
+
+    .profile-icon-web {
+        width: 100%;
+        height: 100%;
+    }
+
+    footer {
+        background-color: #ffffff;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        margin-top: 50px;
+    }
+
+    .footerContainer {
+        width: 100%;
+    }
+
+    .socialIcons {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .socialIcons a {
+        text-decoration: none;
+        padding: 10px;
+        background-color: white;
+        margin: 6px;
+        border-radius: 50%;
+    }
+
+    .socialIcons a i {
+        font-size: 8em;
+        /* Increase icon size */
+        color: rgb(139, 0, 0);
+        opacity: 0.9;
+        margin: 0 30px;
+        margin-top: 50px;
+        z-index: 0;
+    }
+
+    .socialIcons a:hover {
+        background-color: #111;
+        transition: 0.5s;
+    }
+
+    .socialIcons a:hover i {
+        color: white;
+        transition: 0.5s;
+    }
+
+    .footerNav {
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+    }
+
+    .footerNav ul {
+        display: flex;
+        flex-direction: column;
+        /* Horizontal layout */
+        align-items: center;
+        justify-content: center;
+        list-style-type: none;
+        width: auto;
+        /* Adjust width */
+        padding: 0;
+    }
+
+    .footerNav ul li {
+        margin: 20px 20px;
+    }
+
+    .footerNav ul li a {
+        color: rgb(93, 3, 3);
+        text-decoration: none;
+        font-size: 4em;
+        /* Increase font size */
+        font-weight: 600;
+        opacity: 0.7;
+        transition: 0.5s;
+    }
+
+    .footerNav ul li a:hover {
+        opacity: 1;
+    }
+
+    .footerBottom {
+        background-color: rgb(139, 0, 0);
+        padding: 15px;
+        /* Increase padding */
+        text-align: center;
+    }
+
+    .footerBottom p {
+        color: white;
+        font-size: 4em;
+        /* Slightly larger font size for readability */
+    }
+}
+
+@media (min-width: 2151px) and (max-width: 3000px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        height: 160px;
+        width: 100%;
+    }
+
+    .left-section {
+        margin-left: -20px;
+    }
+
+    .mg-icon {
+        width: 300px;
+        height: 300px;
+        margin-left: 240px;
+        mix-blend-mode: darken;
+    }
+
+    .middle-section {
+        display: none;
+    }
+
+    .right-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        padding: 0;
+        width: fit-content;
+        /* Adjust width for tablets */
+    }
+
+
+    .right-section .menu-btn i {
+        display: none;
+        /* Hide menu button on larger screens */
+    }
+
+    .right-section ul {
+        margin-top: 10px;
+        background: transparent;
+        /* No background needed */
+        height: auto;
+        /* Height adjusted */
+        width: auto;
+        /* Auto width */
+        text-align: left;
+        /* Align text to the left */
+        transition: none;
+        /* No transition needed */
+        z-index: auto;
+        /* Reset z-index */
+        text-wrap: nowrap;
+    }
+
+    .right-section ul li {
+        margin: 0 20px;
+        /* Adjust spacing for horizontal layout */
+    }
+
+    .right-section ul li a {
+        font-size: 3.8em;
+        /* Increase font size for readability */
+        padding: 8px 12px;
+        /* Adjust padding */
+    }
+
+    .profile-button {
+        margin-left: 0;
+        display: none;
+    }
+
+    .profile-icon-mobile {
+        display: none;
+        /* Hide mobile profile icon on tablet view */
+    }
+
+    .profile-button2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 120px;
+        max-height: 120px;
+        background: none;
+        border: none;
+        margin-right: 80px;
+    }
+
+    .profile-icon-web {
+        width: 100%;
+        height: 100%;
+    }
+
+    footer {
+        background-color: #ffffff;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+        margin-top: 50px;
+    }
+
+    .footerContainer {
+        width: 100%;
+    }
+
+    .socialIcons {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .socialIcons a {
+        text-decoration: none;
+        padding: 10px;
+        background-color: white;
+        margin: 6px;
+        border-radius: 50%;
+    }
+
+    .socialIcons a i {
+        font-size: 9em;
+        /* Increase icon size */
+        color: rgb(139, 0, 0);
+        opacity: 0.9;
+        margin: 0 25px;
+        margin-top: 50px;
+        z-index: 0;
+    }
+
+    .socialIcons a:hover {
+        background-color: #111;
+        transition: 0.5s;
+    }
+
+    .socialIcons a:hover i {
+        color: white;
+        transition: 0.5s;
+    }
+
+    .footerNav {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .footerNav ul {
+        display: flex;
+        flex-direction: column;
+        /* Horizontal layout */
+        align-items: center;
+        justify-content: center;
+        list-style-type: none;
+        width: auto;
+        /* Adjust width */
+        padding: 0;
+    }
+
+    .footerNav ul li {
+        margin: 20px 20px;
+    }
+
+    .footerNav ul li a {
+        color: rgb(93, 3, 3);
+        text-decoration: none;
+        font-size: 5em;
+        /* Increase font size */
+        font-weight: 600;
+        opacity: 0.7;
+        transition: 0.5s;
+    }
+
+    .footerNav ul li a:hover {
+        opacity: 1;
+    }
+
+    .footerBottom {
+        background-color: rgb(139, 0, 0);
+        padding: 15px;
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .footerBottom p {
+        color: white;
+        font-size: 5em;
+        /* Slightly larger font size for readability */
+    }
+}
+
+@media (min-width: 3000px) and (max-width: 3840px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        height: 250px;
+        width: 100%;
+    }
+
+    .left-section {
+        margin-left: -20px;
+    }
+
+    .mg-icon {
+        width: 500px;
+        height: 500px;
+        margin-left: 440px;
+        mix-blend-mode: darken;
+    }
+
+    .middle-section {
+        display: none;
+    }
+
+    .right-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        padding: 0;
+        width: fit-content;
+        /* Adjust width for tablets */
+    }
+
+
+    .right-section .menu-btn i {
+        display: none;
+        /* Hide menu button on larger screens */
+    }
+
+    .right-section ul {
+        margin-top: 10px;
+        background: transparent;
+        /* No background needed */
+        height: auto;
+        /* Height adjusted */
+        width: auto;
+        /* Auto width */
+        text-align: left;
+        /* Align text to the left */
+        transition: none;
+        /* No transition needed */
+        z-index: auto;
+        /* Reset z-index */
+        text-wrap: nowrap;
+    }
+
+    .right-section ul li {
+        margin: 0 35px;
+        /* Adjust spacing for horizontal layout */
+    }
+
+    .right-section ul li a {
+        font-size: 5.5em;
+        /* Increase font size for readability */
+        padding: 8px 12px;
+        /* Adjust padding */
+    }
+
+    .profile-button {
+        margin-left: 0;
+        display: none;
+    }
+
+    .profile-icon-mobile {
+        display: none;
+        /* Hide mobile profile icon on tablet view */
+    }
+
+    .profile-button2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 170px;
+        max-height: 170px;
+        background: none;
+        border: none;
+        margin-right: 100px;
+    }
+
+    .profile-icon-web {
+        width: 100%;
+        height: 100%;
+    }
+
+    footer {
+        background-color: #ffffff;
+        box-shadow: 0 2px 30px rgba(0, 0, 0, 0.2);
+        margin-top: 100px;
+    }
+
+    .footerContainer {
+        width: 100%;
+    }
+
+    .socialIcons {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .socialIcons a {
+        text-decoration: none;
+        padding: 10px;
+        background-color: white;
+        margin: 6px;
+        border-radius: 50%;
+    }
+
+    .socialIcons a i {
+        font-size: 10em;
+        /* Increase icon size */
+        color: rgb(139, 0, 0);
+        opacity: 0.9;
+        margin: 0 30px;
+        margin-top: 50px;
+        z-index: 0;
+    }
+
+    .socialIcons a:hover {
+        background-color: #111;
+        transition: 0.5s;
+    }
+
+    .socialIcons a:hover i {
+        color: white;
+        transition: 0.5s;
+    }
+
+    .footerNav {
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+    }
+
+    .footerNav ul {
+        display: flex;
+        flex-direction: column;
+        /* Horizontal layout */
+        align-items: center;
+        justify-content: center;
+        list-style-type: none;
+        width: auto;
+        /* Adjust width */
+        padding: 0;
+    }
+
+    .footerNav ul li {
+        margin: 20px;
+    }
+
+    .footerNav ul li a {
+        color: rgb(93, 3, 3);
+        text-decoration: none;
+        font-size: 6.5em;
+        /* Increase font size */
+        font-weight: 600;
+        opacity: 0.7;
+        transition: 0.5s;
+    }
+
+    .footerNav ul li a:hover {
+        opacity: 1;
+    }
+
+    .footerBottom {
+        background-color: rgb(139, 0, 0);
+        padding: 15px;
+        /* Increase padding */
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .footerBottom p {
+        color: white;
+        font-size: 6.5em;
+        /* Slightly larger font size for readability */
+    }
+}

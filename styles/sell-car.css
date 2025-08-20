@@ -1,0 +1,742 @@
+body,
+html{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+.hero {
+  background: linear-gradient(135deg, #f9f9f9 0%, #e0e0e0 100%); /* Gradient from #f9f9f9 to #e0e0e0 */
+  color: #333; /* Darker text color for contrast */
+  text-align: center;
+  padding: 60px 20px; /* Adjust padding as needed */
+  border-bottom: 1px solid #ddd; 
+  margin-top: 10%;
+}
+
+.hero-content {
+  margin: 0 auto;
+}
+
+.hero-content h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  font-weight: bold;
+  line-height: 1.2;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #d3d3d3, #808080); /* Light gray to gray gradient */
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  position: relative;
+}
+
+.hero-content h1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+  z-index: -1;
+}
+
+.hero-content p {
+  font-size: 1.2em; /* Adjust size to complement the heading */
+  margin-bottom: 20px;
+  font-weight: 300;
+  opacity: 0.8;
+}
+
+.why-container {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.features{
+  height: fit-content;
+  margin-top: 30%;
+}
+
+.card1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 2.5% 0;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.left {
+    flex: 45%;
+    overflow: hidden;
+}
+
+.card1 .left img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+}
+
+.card1 .right {
+    flex: 55%;
+    padding: 10px;
+}
+
+.card1 .right h3 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.card1 .right p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #000;
+}
+  /* Section Styling */
+  .testimonials {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+    position: relative;
+    margin-top: 15%;
+}
+
+.testimonials h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Container for Testimonials */
+.testimonial-container {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    height: auto; /* Adjust based on the height of your testimonials */
+    overflow: hidden; /* Hide overflowing content */
+}
+
+/* Styling for Each Testimonial */
+.testimonial {
+    position: absolute;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    transform: translateX(100%);
+}
+
+.testimonial.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.testimonial p {
+    font-size: 1.2em;
+    margin: 0;
+    color: #444;
+}
+
+.testimonial .author {
+    margin-top: 15px;
+    font-size: 1em;
+    color: #777;
+}
+
+/* Keyframes for Slide-In Effect */
+@keyframes slide-in {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+ /* Container should be scrollable */
+ /* Define the animations */
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateX(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+      opacity: 0;
+      transform: scale(0.9);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+/* Apply animations to cards */
+
+.how-it-works {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+  text-align: center;
+  margin-top: 15%;
+}
+
+.how-it-works h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  width: 95%;
+  margin: 15px 2.5%;
+  flex: 1 1 calc(20% - 30px);
+  box-sizing: border-box;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.card h3{
+  margin: 8px 0;
+}
+
+.card p{
+  margin: 0;
+  padding:8px 0;
+  text-align: left;
+}
+
+.card.fade-in-up {
+  animation: fadeInUp 0.6s forwards;
+}
+
+.card.scale-in {
+  animation: scaleIn 0.6s forwards;
+}
+
+.commission {
+  padding: 10px;
+  text-align: center;
+  margin-top: 15%;
+}
+
+.commission h2 {
+  font-size: 2.2em;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.rate-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+
+.rate {
+  background-color: #ffffff;
+  border-left: 5px solid #708090;
+  padding: 20px;
+  padding-left: 10px;
+  width: 100%;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: left;
+}
+
+.rate h3 {
+  font-size: 1.5em;
+  margin: 10px 0;
+  color: #333;
+}
+
+.rate p {
+  font-size: 1.2em;
+  margin: 0;
+  color: #555;
+}
+
+.additional-info {
+  background-color: #fff3e0; /* Light orange background for emphasis */
+  border: 2px solid #ff9800; /* Orange border for emphasis */
+  border-radius: 8px;
+  padding: 10px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.additional-info h3 {
+  font-size: 1.4em;
+  margin: 15px;
+  margin-top: 0;
+  color: #d32f2f; 
+}
+
+.additional-info p {
+  font-size: 1em;
+  text-align: start;
+  margin: 0;
+  color: #666;
+}
+
+.contact-us {
+    padding: 40px 10px;
+    text-align: center;
+}
+
+.contact-us h2 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 600;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.contact-button {
+    display: flex;
+    width: 48%;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    font-size: 1.1em;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.contact-button.call {
+  border-color: #808080; /* Gray for border */
+  color: #808080;
+}
+
+.contact-button.call:hover {
+  color: #DCDCDC; /* Dim Gray for hover effect */
+  border-color: #DCDCDC;
+}
+
+.contact-button.chat {
+  border-color: #808080; /* Gray for border */
+  color: #808080;
+}
+
+.contact-button.chat:hover {
+  color: #DCDCDC; /* Dim Gray for hover effect */
+  border-color: #DCDCDC;
+}
+
+.contact-email {
+    font-size: 1.2em;
+    color: #333;
+    font-weight: 400;
+    text-align: start;
+}
+
+.contact-email a {
+    color: #333;
+    text-decoration: none;
+}
+
+.contact-email a:hover {
+    text-decoration: underline;
+}
+
+@media(max-width:600px){
+  .testimonials h2{
+    font-size: 1.8em;
+  }
+
+  .testimonial-container{
+    height: 200px;
+  }
+
+  .testimonial p{
+    font-size: 1.3em;
+  }
+
+  .testimonial .author{
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px){
+  .hero{
+    margin-top: 7%;
+  }
+  .hero-content h1{
+    font-size: 3.5em;
+  }
+
+  .hero-content p {
+    font-size: 2.2em;
+  }
+
+  .features{
+    margin-top: 15%;
+  }
+
+  .card1 .right h3{
+    font-size: 2.8em;
+  }
+
+  .card1 .right p{
+    font-size: 2.2em ;
+  }
+
+  .how-it-works h2{
+    font-size: 3.6em;
+  }
+
+  .card h3{
+    margin: 8px 0;
+    font-size: 2.5em;
+  }
+  
+  .card p{
+    font-size: 2em;
+    margin: 0;
+    padding:20px;
+    text-align: left;
+  }
+
+  .commission{
+    margin-top: 10%;
+  }
+
+  .commission h2{
+    font-size: 3.5em;
+    margin-bottom: 5%;
+  }
+
+  .rate h3 {
+    font-size: 2.5em;
+  }
+  
+  .rate p {
+    font-size: 2.3em;
+  }
+
+  .additional-info{
+    padding-bottom: 20px;
+  }
+
+  .additional-info h3 {
+    font-size: 2.5em;
+  }
+  
+  .additional-info p {
+    font-size: 2.3em;
+  }
+
+  .testimonials h2{
+    font-size: 3.5em;
+  }
+
+  .testimonial-container{
+    height: 350px;
+  }
+
+  .testimonial p{
+    font-size: 2.5em;
+  }
+
+  .testimonial .author{
+    font-size: 2em;
+  }
+
+  .contact-us{
+    margin-top: 10%;
+  }
+
+  .contact-us h2{
+    font-size: 3.5em;
+    margin-bottom: 5%;
+  }
+
+  .contact-button.call,
+  .contact-button.chat{
+    font-size: 2.4em;
+  }
+
+  .contact-email{
+    margin-top: 6%;
+    font-size: 2.6em;
+  }
+
+}
+
+@media (min-width: 1025px) and (max-width: 1920px){
+  .hero{
+    margin-top: 7%;
+  }
+  .hero-content h1{
+    font-size: 4.5em;
+  }
+
+  .hero-content p {
+    font-size: 3.7em;
+  }
+
+  .features{
+    margin-top: 15%;
+  }
+
+  .card1 .right h3{
+    font-size: 4.8em;
+  }
+
+  .card1 .right p{
+    font-size: 4.2em ;
+  }
+
+  .how-it-works h2{
+    font-size: 6em;
+  }
+
+ .card{
+  padding: 30px;
+ }
+
+  .card h3{
+    margin: 8px 0;
+    font-size: 4.2em;
+  }
+  
+  .card p{
+    font-size: 3.8em;
+    margin: 0;
+    padding:30px;
+    text-align: left;
+  }
+
+  .commission{
+    margin-top: 10%;
+  }
+
+  .commission h2{
+    font-size: 6em;
+    margin-bottom: 5%;
+  }
+
+  .rate{
+    padding: 40px;
+    padding-left: 20px;
+  }
+
+  .rate h3 {
+    font-size: 4.2em;
+  }
+  
+  .rate p {
+    font-size: 3.8em;
+  }
+
+  .additional-info{
+    padding: 40px 20px;
+  }
+
+  .additional-info h3 {
+    font-size: 4.2em;
+  }
+  
+  .additional-info p {
+    font-size: 3.8em;
+  }
+
+  .testimonials h2{
+    font-size: 6em;
+  }
+
+  .testimonial-container{
+    height: 650px;
+  }
+
+  .testimonial p{
+    font-size: 4.2em;
+  }
+
+  .testimonial .author{
+    font-size: 3.8em;
+  }
+
+  .contact-us{
+    margin-top: 10%;
+  }
+
+  .contact-us h2{
+    font-size: 6em;
+    margin-bottom: 5%;
+  }
+
+  .contact-button.call,
+  .contact-button.chat{
+    font-size: 3.8em;
+  }
+
+  .contact-email{
+    margin-top: 6%;
+    font-size: 3.8em;
+  }
+
+}
+
+@media (min-width: 1921px) and (max-width: 3840px) {
+  .hero{
+    margin-top: 7%;
+  }
+  .hero-content h1{
+    font-size: 7.5em;
+  }
+
+  .hero-content p {
+    font-size: 6.5em;
+  }
+
+  .features{
+    margin-top: 15%;
+  }
+
+  .card1 .right h3{
+    font-size: 8em;
+  }
+
+  .card1 .right p{
+    font-size: 7.6em ;
+  }
+
+  .how-it-works h2{
+    font-size: 10em;
+  }
+
+ .card{
+  padding: 60px;
+ }
+
+  .card h3{
+    margin: 8px 0;
+    font-size: 7em;
+  }
+  
+  .card p{
+    font-size: 6.5em;
+    margin: 0;
+    padding:60px;
+    text-align: left;
+  }
+
+  .commission{
+    margin-top: 10%;
+  }
+
+  .commission h2{
+    font-size: 10em;
+    margin-bottom: 5%;
+  }
+
+  .rate{
+    padding: 80px;
+    padding-left: 40px;
+    margin-bottom: 5%;
+  }
+
+  .rate h3 {
+    font-size: 8em;
+  }
+  
+  .rate p {
+    font-size: 7.5em;
+  }
+
+  .additional-info{
+    padding: 80px 40px;
+  }
+
+  .additional-info h3 {
+    font-size: 7.6em;
+  }
+  
+  .additional-info p {
+    font-size: 7em;
+  }
+
+  .testimonials h2{
+    font-size: 10em;
+  }
+
+  .testimonial-container{
+    margin-top: 5%;
+    max-width: 1200px;
+    height: 1050px;
+  }
+
+  .testimonial p{
+    font-size: 7em;
+  }
+
+  .testimonial .author{
+    font-size: 5.8em;
+  }
+
+  .contact-us{
+    margin-top: 10%;
+  }
+
+  .contact-us h2{
+    font-size: 10em;
+    margin-bottom: 5%;
+  }
+
+  .contact-button.call,
+  .contact-button.chat{
+    font-size: 7em;
+  }
+
+  .contact-email{
+    margin-top: 6%;
+    font-size: 7em;
+  }
+
+}

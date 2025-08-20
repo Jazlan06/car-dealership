@@ -1,0 +1,290 @@
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.seller-details-container {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    padding: 0;
+    padding-bottom: 20px;
+    margin: auto;
+    margin-top: 75px;
+    position: relative;
+}
+
+.card-body{
+    padding: 0;
+}
+
+.seller-car-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.interested-car-info{
+    padding: 0 8px;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.card-text small {
+    display: block;
+    margin-top: 5px;
+}
+
+.alert-success {
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+}
+
+.alert-success i {
+    margin-right: 10px;
+}
+
+.card-subtitle {
+    margin-top: 20px;
+}
+
+.card-text i {
+    margin-right: 10px;
+}
+
+.btn-outline-primary, .btn-danger {
+    margin-top: 30px;
+    width: 45%;
+}
+
+.text-muted {
+    font-size: 0.9em;
+}
+
+
+@media (min-width: 601px) and (max-width: 1024px){
+    .close {
+        position: absolute;
+        top: 30px;
+        right: 50px;
+        background: none;
+        border: none;
+        font-size:4em;
+        cursor: pointer;
+    }
+
+    .seller-details-container {
+        border-radius: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+        padding: 0;
+        padding-bottom: 20px;
+        margin: auto;
+        margin-top: 120px;
+        position: relative;
+    }
+
+    .card-body{
+        padding: 0;
+    }
+
+    .interested-car-info{
+        padding: 0 9px;
+    }
+
+    .card-title {
+        font-size: 2.2em;
+        font-weight: bold;
+    }
+
+    .card-text small {
+        display: block;
+        margin-top: 10px;
+        font-size: 1em;
+    }
+
+    .text-primary{
+        font-size: 2.4em;
+    }
+
+    .text-info{
+        font-size: 2.2em;
+    }
+
+    .alert-success {
+        font-size: 1.5em;
+        display: flex;
+        align-items: center;
+        margin: 0;
+    }
+
+    .interested-car-info h6{
+        font-size: 1.8em;
+    }
+
+    .interested-car-info p{
+        font-size: 1.9em;
+    }
+
+    .d-flex a{
+        padding: 10px;
+        font-size: 1.8em;
+    }
+
+    .d-flex i{
+        font-size: 1.2em;
+    }
+   
+}
+
+@media (min-width: 1025px) and (max-width: 1920px){
+    .close {
+        position: absolute;
+        top: 60px;
+        right: 100px;
+        background: none;
+        border: none;
+        font-size:6em;
+        cursor: pointer;
+    }
+
+    .seller-details-container {
+        border-radius: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 1300px;
+        padding: 0;
+        padding-bottom: 20px;
+        margin: auto;
+        margin-top: 20%;
+        position: relative;
+    }
+
+    .card-body{
+        padding: 0;
+    }
+
+    .interested-car-info{
+        padding: 0 15px;
+        padding-bottom: 30px;
+    }
+
+    .card-title {
+        font-size: 3.5em;
+        font-weight: bold;
+    }
+
+    .card-text small .text-muted {
+        display: block;
+        margin-top: 10px;
+        font-size: 1.5em;
+    }
+
+
+
+    .text-primary{
+        font-size: 4em;
+    }
+
+    .text-info{
+        font-size: 3.6em;
+    }
+
+    .alert-success {
+        font-size: 3em;
+        display: flex;
+        align-items: center;
+        margin: 0;
+    }
+
+    .interested-car-info h6{
+        font-size: 2.8em;
+    }
+
+    .interested-car-info p{
+        font-size: 3.3em;
+    }
+
+    .d-flex a{
+        padding: 20px;
+        font-size: 3.5em;
+    }
+}
+
+@media (min-width: 1921px) and (max-width: 3840px){
+    .close {
+        position: absolute;
+        top: 5%;
+        right: 7%;
+        background: none;
+        border: none;
+        font-size:10em;
+        cursor: pointer;
+    }
+
+    .seller-details-container {
+        border-radius: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 1900px;
+        padding: 0;
+        padding-bottom: 20px;
+        margin: auto;
+        margin-top: 20%;
+        position: relative;
+    }
+
+    .card-body{
+        padding: 0;
+    }
+
+    .interested-car-info{
+        padding: 40px 20px;
+        padding-bottom: 30px;
+    }
+
+    .card-title {
+        font-size: 6.5em;
+        font-weight: 500;
+    }
+
+    small.text-muted {
+        display: block;
+        margin: 20px 0;
+        font-size: 1em;
+    }
+
+    .text-primary{
+        font-size: 7em;
+    }
+
+    .text-info{
+        font-size: 6.5em;
+    }
+
+    .alert-success {
+        font-size: 4.4em;
+        display: flex;
+        align-items: center;
+        margin: 30px 0;
+    }
+
+    .interested-car-info h6{
+        font-size: 4.4em;
+    }
+
+    .interested-car-info p{
+        font-size: 5em;
+    }
+
+    .d-flex a{
+        padding: 30px;
+        font-size: 5em;
+    }
+}

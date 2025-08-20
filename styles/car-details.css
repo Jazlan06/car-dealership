@@ -1,0 +1,1453 @@
+@media (max-width:600px) {
+
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        padding-bottom: 25px;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    body {
+        background-color: rgb(249, 244, 244);
+    }
+
+    header {
+        background-color: white;
+    }
+
+    #car-details-container {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    #car-details .used-container {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        width: 100%;
+        overflow: hidden;
+        margin-top: 0px;
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        box-sizing: border-box;
+    }
+
+    #car-details .used-car-container {
+        position: relative;
+        /* Position relative for slider controls */
+        height: 58%;
+        /* Fixed height for car image container */
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        /* Center image horizontally */
+        align-items: center;
+    }
+
+    #car-details .slider {
+        display: flex;
+        transition: transform 0.5s ease;
+        height: 300px;
+        width: 100%;
+    }
+
+    #car-details .slide {
+        min-width: 100%;
+        max-height: fit-content;
+        box-sizing: border-box;
+    }
+
+    #car-details .used-car-img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        /* Ensure the image covers the container */
+    }
+
+    #car-details .prev,
+    #car-details .next {
+        position: absolute;
+        width: fit-content;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    #car-details .prev {
+        left: 1%;
+        /* Shift to the left of the container */
+    }
+
+    #car-details .next {
+        right: 1%;
+        /* Shift to the right of the container */
+    }
+
+    #car-details .used-car-name-price {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #car-details .used-car-overview-details {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 4px;
+        padding-bottom: 8px;
+        font-size: 1.3em;
+    }
+
+    #car-details .used-car-info {
+        flex: 1;
+        /* Take up the remaining height */
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        height: 40%;
+        /* Fixed height for car info container */
+    }
+
+    #car-details .used-car-name {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 1.5em;
+        color: #333;
+        margin: 8px;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+
+    #car-details .used-price-fueltype {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #car-details .used-price {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 1.7em;
+        color: #333;
+        margin: 0 8px;
+        margin-bottom: 15px;
+        font-weight: 700;
+    }
+
+    #car-details .used-car-kms,
+    #car-details .used-fuel-type,
+    #car-details .transmission,
+    #car-details .used-ownership {
+        font-weight: 600;
+        font-size: 0.75em;
+        color: #666;
+        margin: 0 8px;
+    }
+
+    #car-details .used-actions2 {
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        width: 100%;
+        height: 50px;
+        bottom: 0;
+    }
+
+    #car-details button {
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        width: 48%;
+        padding: 8px 12px;
+        font-size: 1.2em;
+    }
+
+    #car-details .chat {
+        background-color: #28a745;
+        color: #fff;
+    }
+
+    #car-details .interested {
+        background-color: #dc3545;
+        color: #fff;
+    }
+
+    #car-details button:hover {
+        opacity: 0.9;
+    }
+
+    .sellers-remark-container{
+        background-color: white;
+        width: 100%;
+        height: auto;
+        margin-top: 35px;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .remark-header{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 1.6rem;
+        padding-top: 8px;
+        padding-left: 8px;
+        margin-bottom: 10px;
+        font-weight: 600;
+    }
+
+    .remark{
+        padding: 0 8px;
+        color: black;
+        font-size: 1.1rem;
+        padding-bottom: 10px;
+    }
+
+    .car-overview {
+        background: #fff;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        padding: 15px;
+        max-width: 600px;
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+    
+    .car-overview h2{
+        font-size: 1.7em;
+        margin-bottom: 1em;
+        color: #000;
+    }
+    
+    .car-overview .detail {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 22px;
+    }
+    
+    .car-overview .detail span {
+        font-size: 1.1em;
+        color: #666;
+    }
+    
+    .car-overview .detail span:last-child {
+        font-weight: 500;
+        color: black;
+    }
+    
+    .car-overview .detail i {
+        margin-right: 5px;
+        color: #666;
+    }
+
+    .engine-transmission,
+    .dimensions-capacity{
+        margin-top: 40px;
+        padding: 15px;
+        background-color: #fff;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .engine-transmission h2 ,
+    .dimensions-capacity h2{
+        font-size: 1.6em;
+        margin-bottom: 1em;
+        color: #000;
+    }
+    
+    .engine-transmission .detail ,
+    .dimensions-capacity .detail{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    
+    .engine-transmission .detail span ,
+    .dimensions-capacity .detail span{
+        font-size: 1.1em;
+        color: #666;
+    }
+    
+    .engine-transmission .detail span:last-child,
+    .dimensions-capacity .detail span:last-child {
+        font-weight: 500;
+        color: #000;
+    }
+
+    
+    /* Container for recommendations */
+.recommendation-container {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    width: 100%; /* Full viewport width */
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.header{
+    background-color: #fff;
+    margin-top: 50px;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.header h2{
+    font-size: 1.7em;
+    margin-bottom: 15px;
+}
+
+/* Style for individual recommendation cards */
+.recommendation-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 93%; /* 93% of the viewport width */
+    margin: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    flex-shrink: 0; /* Prevent shrinking of the card */
+}
+
+/* Style for recommendation card images */
+.recommendation-card img {
+    width: 100%;
+    height: auto; /* Ensure height adjusts automatically */
+    object-fit: contain; /* Cover the container while maintaining aspect ratio */
+    display: block;
+    aspect-ratio: 16 / 9;
+}
+
+/* Style for recommendation card details */
+.recommendation-details {
+    padding: 15px;
+    display: flex;
+    flex-direction: column; /* Stack details vertically */
+}
+
+/* Title style in recommendation details */
+.recommendation-details h2 {
+    font-size: 1.4em; /* Adjusted for readability */
+    margin: 10px;
+    margin-left: 0;
+}
+
+/* Overview style */
+.recommendation-overview {
+    font-size: 1em; /* Adjusted font size */
+    color: #555;
+    margin: 5px 0;
+}
+
+/* Price style */
+.recommendation-price {
+    font-size: 1.6em; /* Adjusted font size */
+    font-weight: bold;
+    color: #000;
+    margin-top: 8px;
+}
+
+/* Style for the seller details link */
+.seller-details {
+    display: inline-block;
+    font-size: 1.1em;
+    padding: 10px 0;
+    color: #ff6600;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for seller details link */
+.seller-details:hover {
+    background-color: #e65c00;
+}
+}
+
+@media (min-width:601px) and (max-width:1024px) {
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        padding-bottom: 25px;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    body {
+        background-color: rgb(249, 244, 244);
+    }
+
+    header {
+        background-color: white;
+    }
+
+    #car-details-container {
+        padding: 0;
+        margin: 0;
+        min-width: 100%;
+    }
+
+    #car-details .used-container {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        width: fit-content;
+        overflow: hidden;
+        margin-top: 0px;
+        display: flex;
+        flex-direction: column;
+        height: 700px;
+        box-sizing: border-box;
+    }
+
+    #car-details .used-car-container {
+        position: relative;
+        /* Position relative for slider controls */
+        height: 80%;
+        /* Fixed height for car image container */
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        /* Center image horizontally */
+        align-items: center;
+    }
+
+    #car-details .slider {
+        display: flex;
+        transition: transform 0.5s ease;
+        height: 100%;
+        width: 100%;
+    }
+
+    #car-details .slide {
+        min-width: 100%;
+        
+        box-sizing: border-box;
+    }
+
+    #car-details .used-car-img {
+        width: 100%;
+        height: 100%;
+       object-fit:cover;
+    }
+
+    #car-details .prev,
+    #car-details .next {
+        position: absolute;
+        width: fit-content;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 2em;
+    }
+
+    #car-details .prev {
+        left: 1%;
+    }
+
+    #car-details .next {
+        right: 1%;
+        }
+
+    #car-details .used-car-name-price {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #car-details .used-car-overview-details {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 20px 10px;
+        font-size: 1.8em;
+    }
+
+    #car-details .used-car-info {
+        flex: 1;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        height: 40%;
+        }
+
+    #car-details .used-car-name {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 2em;
+        color: #333;
+        margin: 0 12px;
+        margin-top: 15px;
+        margin-bottom: 20px;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+
+    #car-details .used-price-fueltype {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #car-details .used-price {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 2.3em;
+        color: #333;
+        margin:8px;
+        margin-bottom: 15px;
+        font-weight: 700;
+    }
+
+    #car-details .used-car-kms,
+    #car-details .used-fuel-type,
+    #car-details .transmission,
+    #car-details .used-ownership {
+        font-weight: 600;
+        color: #666;
+    }
+
+    #car-details .used-actions2 {
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        width: 100%;
+        height: 60px;
+        bottom: 0;
+    }
+
+    #car-details button {
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        width: 48%;
+        padding: 8px 12px;
+        font-size: 1.7em;
+    }
+
+    #car-details .chat {
+        background-color: #28a745;
+        color: #fff;
+    }
+
+    #car-details .interested {
+        background-color: #dc3545;
+        color: #fff;
+    }
+
+    #car-details button:hover {
+        opacity: 0.9;
+    }
+
+    .sellers-remark-container{
+        background-color: white;
+        width: 100%;
+        height: auto;
+        margin-top: 35px;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .remark-header{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 2em;
+        padding-top: 8px;
+        padding-left: 10px;
+        margin-bottom: 10px;
+        font-weight: 600;
+        margin-top: 50px;
+    }
+
+    .remark{
+        padding: 0 15px;
+        color: black;
+        font-size: 1.5em;
+        padding-bottom: 10px;
+    }
+
+    .car-overview {
+        background: #fff;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        padding: 15px;
+        padding-right: 20px;
+        max-width: 100%;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+    
+    .car-overview h2{
+        font-size: 2em;
+        margin-bottom: 20px;
+        color: #000;
+    }
+    
+    .car-overview .detail {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 22px;
+        
+    }
+    
+    .car-overview .detail span {
+        font-size: 1.6em;
+        color: #666;
+    }
+    
+    .car-overview .detail span:last-child {
+        font-weight: 500;
+        color: black;
+    }
+    
+    .car-overview .detail i {
+        margin-right: 5px;
+        color: #666;
+    }
+
+    .engine-transmission,
+    .dimensions-capacity{
+        margin-top: 50px;
+        padding: 15px;
+        background-color: #fff;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .engine-transmission h2 ,
+    .dimensions-capacity h2{
+        font-size: 2em;
+        margin-bottom: 20px;
+        color: #000;
+    }
+    
+    .engine-transmission .detail ,
+    .dimensions-capacity .detail{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    
+    .engine-transmission .detail span ,
+    .dimensions-capacity .detail span{
+        font-size: 1.6em;
+        color: #666;
+    }
+    
+    .engine-transmission .detail span:last-child,
+    .dimensions-capacity .detail span:last-child {
+        font-weight: 500;
+        color: #000;
+    }
+
+    
+    /* Container for recommendations */
+    .recommendation-container {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        width: 100%;
+        /* Full viewport width */
+        margin: 0 auto;
+        padding: 10px;
+        background-color: #fff;
+    }
+
+    .header {
+        background-color: #fff;
+        margin-top: 50px;
+        padding: 15px;
+    }
+
+    .header h2 {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 2.3em;
+        font-weight: 600;
+        margin-bottom: 15px;
+        color: #000;
+    }
+
+    .recommendation-card {
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        width: 95%;
+        margin: 0 2.5%;
+        overflow: hidden;
+        transition: transform 0.3s;
+        flex-shrink: 0;
+    }
+
+    .recommendation-card img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        display: block;
+        aspect-ratio: 16 / 9;
+    }
+
+    .recommendation-details {
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        }
+
+    .recommendation-details h2 {
+        font-size: 2em;
+        margin: 10px;
+        margin-left: 0;
+    }
+
+    .recommendation-overview {
+        font-size: 1.6em;
+ 
+        color: #555;
+        margin: 5px 0;
+    }
+
+    .recommendation-price {
+        font-size: 2.4em;
+        font-weight: bold;
+        color: #000;
+        margin-top: 8px;
+    }
+}
+
+@media (min-width:1025px) and (max-width:1920px) {
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        padding-bottom: 25px;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    body {
+        background-color: rgb(249, 244, 244);
+    }
+
+    header {
+        background-color: white;
+    }
+
+    #car-details-container {
+        padding: 0;
+        margin: 0;
+        min-width: 100%;
+    }
+
+    #car-details .used-container {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        width: fit-content;
+        overflow: hidden;
+        margin-top: 0px;
+        display: flex;
+        flex-direction: column;
+        height: 1200px;
+        box-sizing: border-box;
+    }
+
+    #car-details .used-car-container {
+        position: relative;
+        /* Position relative for slider controls */
+        height: 80%;
+        /* Fixed height for car image container */
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        /* Center image horizontally */
+        align-items: center;
+    }
+
+    #car-details .slider {
+        display: flex;
+        transition: transform 0.5s ease;
+        height: 100%;
+        width: 100%;
+    }
+
+    #car-details .slide {
+        min-width: 100%;
+        min-height: 100%;
+        box-sizing: border-box;
+    }
+
+    #car-details .used-car-img {
+        width: 100%;
+        height: 100%;
+       object-fit:contain;
+    }
+
+    #car-details .prev,
+    #car-details .next {
+        position: absolute;
+        width: fit-content;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 4em;
+    }
+
+    #car-details .prev {
+        left: 1%;
+    }
+
+    #car-details .next {
+        right: 1%;
+        }
+
+    #car-details .used-car-name-price {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #car-details .used-car-overview-details {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 20px 10px;
+        font-size: 1.8em;
+    }
+
+    #car-details .used-car-info {
+        flex: 1;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        height: 40%;
+        }
+
+    #car-details .used-car-name {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 4em;
+        color: #333;
+        margin: 0 12px;
+        margin-top: 15px;
+        margin-bottom: 20px;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+
+    #car-details .used-price-fueltype {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #car-details .used-price {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 4.5em;
+        color: #333;
+        margin:8px;
+        margin-bottom: 15px;
+        font-weight: 700;
+    }
+
+    #car-details .used-car-kms,
+    #car-details .used-fuel-type,
+    #car-details .transmission,
+    #car-details .used-ownership {
+        font-weight: 600;
+        color: #666;
+        font-size: 1.5em;
+    }
+
+    #car-details .used-actions2 {
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        width: 100%;
+        height: fit-content;
+        bottom: 0;
+    }
+
+    #car-details button {
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        width: 48%;
+        padding: 10px 0;
+        font-size: 1.5em;
+    }
+
+    #car-details .chat {
+        background-color: #28a745;
+        color: #fff;
+    }
+
+    #car-details .interested {
+        background-color: #dc3545;
+        color: #fff;
+    }
+
+    #car-details button:hover {
+        opacity: 0.9;
+    }
+
+    .sellers-remark-container{
+        background-color: white;
+        width: 100%;
+        height: auto;
+        margin-top: 50px;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .remark-header{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 4em;
+        padding-top: 8px;
+        padding-left: 10px;
+        margin-bottom: 10px;
+        font-weight: 600;
+        margin-top: 50px;
+    }
+
+    .remark{
+        padding: 0 15px;
+        color: black;
+        font-size: 3em;
+        padding-bottom: 10px;
+    }
+
+    .car-overview {
+        background: #fff;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        padding: 15px;
+        padding-right: 20px;
+        max-width: 100%;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+    
+    .car-overview h2{
+        font-size: 4em;
+        margin-bottom: 50px;
+        color: #000;
+    }
+    
+    .car-overview .detail {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 25px;
+        
+    }
+    
+    .car-overview .detail span {
+        font-size: 3em;
+        color: #666;
+    }
+    
+    .car-overview .detail span:last-child {
+        font-weight: 500;
+        color: black;
+    }
+    
+    .car-overview .detail i {
+        margin-right: 12px;
+        color: #666;
+    }
+
+    .engine-transmission,
+    .dimensions-capacity{
+        margin-top: 50px;
+        padding: 15px;
+        background-color: #fff;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .engine-transmission h2 ,
+    .dimensions-capacity h2{
+        font-size: 4em;
+        margin-bottom: 50px;
+        color: #000;
+    }
+    
+    .engine-transmission .detail ,
+    .dimensions-capacity .detail{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    
+    .engine-transmission .detail span ,
+    .dimensions-capacity .detail span{
+        font-size: 3em;
+        color: #666;
+    }
+    
+    .engine-transmission .detail span:last-child,
+    .dimensions-capacity .detail span:last-child {
+        font-weight: 500;
+        color: #000;
+    }
+
+    
+    /* Container for recommendations */
+    .recommendation-container {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        width: 100%;
+        margin: 0 auto;
+        padding: 10px;
+        background-color: #fff;
+    }
+
+    .header {
+        background-color: #fff;
+        margin-top: 50px;
+        padding: 15px;
+    }
+
+    .header h2 {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 4em;
+        font-weight: 600;
+        margin-bottom: 50px;
+        color: #000;
+    }
+
+    .recommendation-card {
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        width: 95%;
+        margin: 0 2.5%;
+        overflow: hidden;
+        transition: transform 0.3s;
+        flex-shrink: 0;
+    }
+
+    .recommendation-card img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        display: block;
+        aspect-ratio: 16 / 9;
+    }
+
+    .recommendation-details {
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        }
+
+    .recommendation-details h2 {
+        font-size: 3.5em;
+        margin: 10px;
+        margin-left: 0;
+    }
+
+    .recommendation-overview {
+        font-size: 2.6em;
+        color: #555;
+        margin: 5px 0;
+    }
+
+    .recommendation-price {
+        font-size: 4em;
+        font-weight: bold;
+        color: #000;
+        margin-top: 8px;
+    }
+}
+
+@media (min-width:1921px) and (max-width:3840px) {
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        padding-bottom: 25px;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    body {
+        background-color: rgb(249, 244, 244);
+    }
+
+    header {
+        background-color: white;
+    }
+
+    #car-details-container {
+        padding: 0;
+        margin: 0;
+        min-width: 100%;
+    }
+
+    #car-details .used-container {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        width: fit-content;
+        overflow: hidden;
+        margin-top: 0px;
+        display: flex;
+        flex-direction: column;
+        height: 2000px;
+        box-sizing: border-box;
+    }
+
+    #car-details .used-car-container {
+        position: relative;
+        /* Position relative for slider controls */
+        height: 80%;
+        /* Fixed height for car image container */
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        /* Center image horizontally */
+        align-items: center;
+    }
+
+    #car-details .slider {
+        display: flex;
+        transition: transform 0.5s ease;
+        height: 100%;
+        width: 100%;
+    }
+
+    #car-details .slide {
+        min-width: 100%;
+        min-height: 100%;
+        box-sizing: border-box;
+    }
+
+    #car-details .used-car-img {
+        width: 100%;
+        height: 100%;
+       object-fit:contain;
+    }
+
+    #car-details .prev,
+    #car-details .next {
+        position: absolute;
+        width: fit-content;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 7em;
+    }
+
+    #car-details .prev {
+        left: 1%;
+    }
+
+    #car-details .next {
+        right: 1%;
+        }
+
+    #car-details .used-car-name-price {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #car-details .used-car-overview-details {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 20px 10px;
+        font-size: 1.8em;
+    }
+
+    #car-details .used-car-info {
+        flex: 1;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        height: 40%;
+        }
+
+    #car-details .used-car-name {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 7.5em;
+        color: #333;
+        margin: 20px 15px;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+
+    #car-details .used-price-fueltype {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #car-details .used-price {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 8em;
+        color: #333;
+        margin:8px;
+        margin-left: 20px;
+        margin-bottom: 15px;
+        font-weight: 700;
+    }
+
+    #car-details .used-car-kms,
+    #car-details .used-fuel-type,
+    #car-details .transmission,
+    #car-details .used-ownership {
+        font-weight: 600;
+        color: #666;
+        font-size: 3em;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    #car-details .used-actions2 {
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        width: 100%;
+        height: fit-content;
+        bottom: 0;
+    }
+
+    #car-details button {
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        width: 48%;
+        padding: 10px 0;
+        font-size: 3em;
+    }
+
+    #car-details .chat {
+        background-color: #28a745;
+        color: #fff;
+    }
+
+    #car-details .interested {
+        background-color: #dc3545;
+        color: #fff;
+    }
+
+    #car-details button:hover {
+        opacity: 0.9;
+    }
+
+    .sellers-remark-container{
+        background-color: white;
+        width: 100%;
+        height: auto;
+        margin-top: 50px;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .remark-header{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 7em;
+        padding-top: 8px;
+        padding-left: 10px;
+        margin-bottom: 10px;
+        font-weight: 600;
+        margin-top: 50px;
+    }
+
+    .remark{
+        padding: 0 15px;
+        color: black;
+        font-size: 6em;
+        padding-bottom: 10px;
+    }
+
+    .car-overview {
+        background: #fff;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        padding: 15px;
+        padding-right: 50px;
+        max-width: 100%;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+    
+    .car-overview h2{
+        font-size: 7em;
+        margin-bottom: 50px;
+        color: #000;
+    }
+    
+    .car-overview .detail {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 25px;
+        
+    }
+    
+    .car-overview .detail span {
+        font-size: 6em;
+        color: #666;
+        margin-left: 15px;
+    }
+    
+    .car-overview .detail span:last-child {
+        font-weight: 500;
+        color: black;
+    }
+    
+    .car-overview .detail i {
+        margin-right: 15px;
+        color: #666;
+    }
+
+    .engine-transmission,
+    .dimensions-capacity{
+        margin-top: 50px;
+        padding: 20px;
+        padding-right: 50px;
+        background-color: #fff;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .engine-transmission h2 ,
+    .dimensions-capacity h2{
+        font-size: 7em;
+        margin-bottom: 50px;
+        color: #000;
+    }
+    
+    .engine-transmission .detail ,
+    .dimensions-capacity .detail{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    
+    .engine-transmission .detail span ,
+    .dimensions-capacity .detail span{
+        font-size: 6em;
+        color: #666;
+    }
+    
+    .engine-transmission .detail span:last-child,
+    .dimensions-capacity .detail span:last-child {
+        font-weight: 500;
+        color: #000;
+    }
+
+    
+    /* Container for recommendations */
+    .recommendation-container {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        width: 100%;
+        margin: 0 auto;
+        padding: 10px;
+        background-color: #fff;
+    }
+
+    .header {
+        background-color: #fff;
+        margin-top: 100px;
+        padding: 15px;
+    }
+
+    .header h2 {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 8em;
+        font-weight: 600;
+        margin: 50px;
+        color: #000;
+    }
+
+    .recommendation-card {
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        width: 95%;
+        margin: 4% 2.5%;
+        overflow: hidden;
+        transition: transform 0.3s;
+        flex-shrink: 0;
+    }
+
+    .recommendation-card img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        display: block;
+        aspect-ratio: 16 / 9;
+    }
+
+    .recommendation-details {
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        }
+
+    .recommendation-details h2 {
+        font-size: 7em;
+        margin: 10px;
+        margin-left: 0;
+    }
+
+    .recommendation-overview {
+        font-size: 5.6em;
+        color: #555;
+        margin: 5px 0;
+    }
+
+    .recommendation-price {
+        font-size: 8em;
+        font-weight: bold;
+        color: #000;
+        margin-top: 8px;
+    }
+}

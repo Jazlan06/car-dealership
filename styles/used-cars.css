@@ -1,0 +1,585 @@
+@media (max-width: 600px) {
+    .used-card-column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+  
+    .used-container {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        width: 95%;
+        margin: 0 2.5%;
+        overflow: hidden;
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        height: 450px;
+        box-sizing: border-box;
+    }
+
+    .used-car-container {
+        position: relative; /* Position relative for slider controls */
+        height: 60%; /* Fixed height for car image container */
+        overflow: hidden;
+        display: flex;
+        justify-content: center; /* Center image horizontally */
+        align-items: center;
+    }
+
+    .slider {
+        display: flex;
+        transition: transform 0.5s ease;
+        height: 100%;
+        width: 100%;
+    }
+
+    .slide {
+        min-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .used-car-img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain; /* Ensure the image covers the container */
+    }
+
+    .prev, .next {
+        position: absolute;
+        width: fit-content;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .prev {
+        left: 1%;/* Shift to the left of the container */
+    }
+
+    .next {
+        right: 1%; /* Shift to the right of the container */
+    }
+
+    .used-car-info {
+        flex: 1; /* Take up the remaining height */
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        height: 40%; /* Fixed height for car info container */
+    }
+
+    .used-car-name {
+        font-size: 1.3em;
+        color: #333;
+        margin: 0;
+        font-weight: 700;
+    }
+
+    .used-price-fueltype {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .used-price {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 1.2em;
+        color: #333;
+        margin: 0;
+        font-weight: 800;
+    }
+
+    .used-car-kms,
+    .used-fuel-type,
+    .transmission {
+        font-weight: 600;
+        font-size: 1em;
+        color: #666;
+        margin: 0;
+    }
+
+    .used-actions {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 15px;
+    }
+
+    button {
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        width: 48%;
+        padding: 8px 12px;
+        font-size: 1.1em;
+    }
+
+    .chat {
+        background-color: #28a745;
+        color: #fff;
+    }
+    .phone-icon{
+        color: #fff;
+    }
+
+    .contact-seller {
+        background-color: #dc3545;
+        color: #fff;
+    }
+
+    button:hover {
+        opacity: 0.9;
+    }
+
+    .footer{
+        width: 100%;
+    }
+}
+
+/* Styles for tablet view (min-width: 601px and max-width: 900px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .used-card-column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 15px; /* Added padding for better spacing */
+    }
+
+    .used-container {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        width: 95%; /* Increased width for tablets */
+        height: fit-content;
+        max-height: 800px;
+        margin: 5% 2.5%; /* Adjusted margin for better spacing */
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+    }
+
+    .used-car-container {
+        position: relative;
+        height: 60%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .slider {
+        display: flex;
+        transition: transform 0.5s ease;
+        height: 100%;
+        width: 100%;
+    }
+
+    .slide {
+        min-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .used-car-img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .prev, .next {
+        position: absolute;
+        width: fit-content;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        border: none;
+        padding: 15px;
+        cursor: pointer;
+    }
+
+    .prev {
+        left: 2%; /* Adjusted position */
+    }
+
+    .next {
+        right: 2%; /* Adjusted position */
+    }
+
+    .used-car-info {
+        flex: 1;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        height: 40%;
+    }
+
+    .used-car-name {
+        font-size: 2em; /* Increased font size for better readability */
+        color: #333;
+        margin: 0;
+        font-weight: 700;
+    }
+
+    .used-price-fueltype {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 15px;
+    }
+
+    .used-price {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 2.5em; /* Increased font size */
+        color: #333;
+        margin: 0;
+        font-weight: 800;
+    }
+
+    .used-car-kms,
+    .used-fuel-type,
+    .transmission {
+        font-weight: 600;
+        font-size: 1.7em; /* Increased font size */
+        color: #666;
+        margin: 0;
+    }
+
+    .used-actions {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px; /* Increased margin for spacing */
+    }
+
+    button {
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        width: 48%;
+        padding: 20px 15px; /* Increased padding for better touch */
+        font-size: 1.8em; /* Increased font size */
+    }
+
+    .chat {
+        background-color: #28a745;
+        color: #fff;
+    }
+
+    .contact-seller {
+        background-color: #dc3545;
+        color: #fff;
+    }
+
+    button:hover {
+        opacity: 0.9;
+    }
+
+    .footer {
+        width: 100%;
+        padding: 15px; /* Added padding for spacing */
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1920px) {
+    .used-card-column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 15px;
+        padding-bottom: 30px; /* Added padding for better spacing */
+    }
+
+    .used-container {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        width: 95%; /* Increased width for tablets */
+        height: fit-content;
+        max-height: 1400px;
+        margin: 5% 2.5%; /* Adjusted margin for better spacing */
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        padding-bottom: 50px;
+    }
+
+    .used-car-container {
+        position: relative;
+        height: 60%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .slider {
+        display: flex;
+        transition: transform 0.5s ease;
+        height: 100%;
+        width: 100%;
+    }
+
+    .slide {
+        min-width: 100%;
+        min-height: 100%;
+        box-sizing: border-box;
+    }
+
+    .used-car-img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .prev, .next {
+        position: absolute;
+        width: fit-content;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        border: none;
+        padding: 15px;
+        cursor: pointer;
+        font-size: 4em;
+    }
+
+    .prev {
+        left: 2%; /* Adjusted position */
+    }
+
+    .next {
+        right: 2%; /* Adjusted position */
+    }
+
+    .used-car-info {
+        flex: 1;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        height: 40%;
+    }
+
+    .used-car-name {
+        font-size: 3.8em; /* Increased font size for better readability */
+        color: #333;
+        margin: 0;
+        font-weight: 700;
+    }
+
+    .used-price-fueltype {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 15px;
+    }
+
+    .used-price {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 4.5em; /* Increased font size */
+        color: #333;
+        margin: 0;
+        font-weight: 800;
+    }
+
+    .used-car-kms,
+    .used-fuel-type,
+    .transmission {
+        font-weight: 600;
+        font-size: 3.3em; /* Increased font size */
+        color: #666;
+        margin: 0;
+    }
+
+    .used-actions {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px; /* Increased margin for spacing */
+    }
+
+    button {
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        width: 48%;
+        padding: 30px 15px; /* Increased padding for better touch */
+        font-size: 2.8em; /* Increased font size */
+    }
+
+    .chat {
+        background-color: #28a745;
+        color: #fff;
+    }
+
+    .contact-seller {
+        background-color: #dc3545;
+        color: #fff;
+    }
+
+    button:hover {
+        opacity: 0.9;
+    }
+
+    .footer {
+        width: 100%;
+        padding: 15px; /* Added padding for spacing */
+    }
+}
+
+@media (min-width: 1921px) and (max-width: 3840px) {
+    .used-card-column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 15px;
+        padding-bottom: 30px; /* Added padding for better spacing */
+    }
+
+    .used-container {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        width: 95%; /* Increased width for tablets */
+        height: auto;
+        margin: 5% 2.5%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        padding-bottom: 50px;
+    }
+
+    .used-car-container {
+        position: relative;
+        height: 1500px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .slider {
+        display: flex;
+        transition: transform 0.5s ease;
+        height: 100%;
+        width: 100%;
+    }
+
+    .slide {
+        min-width: 100%;
+        min-height: 100%;
+        box-sizing: border-box;
+    }
+
+    .used-car-img {
+        width: 100%;
+        height: 100%;
+        object-fit: initial;
+    }
+
+    .prev, .next {
+        position: absolute;
+        width: fit-content;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        border: none;
+        padding: 15px;
+        cursor: pointer;
+        font-size: 7em;
+    }
+
+    .prev {
+        left: 2%; /* Adjusted position */
+    }
+
+    .next {
+        right: 2%; /* Adjusted position */
+    }
+
+    .used-car-info {
+        flex: 1;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        height: 40%;
+    }
+
+    .used-car-name {
+        font-size: 7em; /* Increased font size for better readability */
+        color: #333;
+        margin: 0;
+        font-weight: 700;
+    }
+
+    .used-price-fueltype {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 15px;
+    }
+
+    .used-price {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 8em; /* Increased font size */
+        color: #333;
+        margin: 0;
+        font-weight: 800;
+    }
+
+    .used-car-kms,
+    .used-fuel-type,
+    .transmission {
+        font-weight: 600;
+        font-size: 6em; /* Increased font size */
+        color: #666;
+        margin: 0;
+    }
+
+    .used-actions {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px; /* Increased margin for spacing */
+    }
+
+    button {
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        width: 48%;
+        padding: 30px 15px; /* Increased padding for better touch */
+        font-size: 5em; /* Increased font size */
+    }
+
+    .chat {
+        background-color: #28a745;
+        color: #fff;
+    }
+
+    .contact-seller {
+        background-color: #dc3545;
+        color: #fff;
+    }
+
+    button:hover {
+        opacity: 0.9;
+    }
+
+    .footer {
+        width: 100%;
+        padding: 15px; /* Added padding for spacing */
+    }
+}
